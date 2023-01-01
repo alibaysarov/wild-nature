@@ -1,0 +1,102 @@
+@import "fonts";
+
+//fonts
+$text:'Roboto', sans-serif;
+$title:'ProximaNova',sans-serif;
+
+//color
+$darkgreen:#2C6F2F;
+$green:#B7D271;
+$black:#000;
+
+
+
+
+$sp:20px;
+@mixin section($pt,$pb) {
+    padding: #{$pt + px} $sp #{$pb + px} $sp;
+    @media (max-width:767px){
+        padding-top: calc(#{$pt + px}/1.5);
+        padding-bottom: calc(#{$pb + px}/1.5);
+    }
+    @media (max-width:575px){
+        padding-top: calc(#{$pt + px}/2);
+        padding-bottom: calc(#{$pb + px}/2);
+    }
+}
+
+$container:1200;
+@mixin container($maxWidth) {
+    max-width: #{$maxWidth + px};
+    width: 100%;
+    margin: 0 auto;    
+}
+
+@mixin fontSize($pcSize, $mobSize,$maxWidth) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+
+
+@mixin grid-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    grid-auto-rows: auto;
+    @media (max-width:767px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width:475px){
+        grid-template-columns: 1fr;
+        justify-items:center;
+    }
+}
+@mixin grid-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    grid-auto-rows: auto;
+    @media (max-width:1023px){
+        grid-template-columns: repeat(3,1fr);
+    }
+    @media (max-width:767px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width:475px){
+        grid-template-columns:1fr;
+        justify-items:center;
+    }
+}
+@mixin grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    @media (max-width:767px){
+        grid-template-columns:1fr;
+        
+    }
+    @media (max-width:576px){
+        justify-items:center;
+    }
+}
+
+@mixin col {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media(max-width:400px){
+       justify-items: center;
+    }
+}
+@mixin col-center {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+
+@mixin image {
+    max-width: 100%;
+    min-width: 50px;
+    height: auto;
+}

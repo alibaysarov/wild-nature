@@ -1,18 +1,167 @@
-body{
-    background-color: #000;
-    h1{
-        color: red;
-    }
-}
-@media(max-width:768px){
-    h1{
-        font-size: 30px;
-    }
-}
+@import "fonts";
+@import "variables";
 
-
-@media(max-width:768px){
-    body{
-        background-color:green;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $title;
+    color: $darkgreen;
+    font-weight: bold;
+}
+.title{
+    font-family: $title;
+    color: $darkgreen;
+    font-weight: bold;
+    @include fontSize(48,35,1100);
+}
+.button{
+    cursor: pointer;
+    border:none;
+    outline:none;
+    padding: 15px;
+    background-color: $green;
+    border-radius: 15px;
+    @include fontSize(36,24,1100);
+    color: #fff;
+    font-family: $title;
+    width: 100%;
+    max-width: 350px;
+    transition: opacity 0.3s ease,transform 0.3s ease,background-color 0.3s ease;
+    &:hover{
+        background-color: darken($green,10%);
+    }
+    &:active{
+        transform: scale(.95)
     }
 }
+.hero{
+    overflow: hidden;
+    @include section(150,220);
+    position: relative;
+    &__content{
+        display: grid;
+        grid-template-columns: 3fr 1fr;    
+    }
+    &__title{
+        display: block;
+        margin: 0px 0px 22px;   
+    }
+    &__subtitle{
+        display: block;
+        font-family: $title;
+        font-style: normal;
+        font-weight: 400;
+        @include fontSize(36,24,1100);
+        line-height: 1.1;
+        margin-bottom: 33px;
+        color: #000000;
+    }
+    &__bg{
+        position: absolute;
+        width: 100%;
+        max-width: 1024px;
+        z-index: -2;
+        right: -50px;
+        bottom: 20px;
+        transform: translate(0px,20px);
+        img{
+            object-fit: cover;
+            @include image;
+            width: 100%;
+        }
+        &_tree{
+            max-width: 400px;
+            // transform: rotate(45deg);
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        &_tree2{
+            max-width: 400px;
+            // transform: rotate(45deg);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            right: 20%;
+            top: 70%;
+            bottom: 0px;
+            transform: translate(0px,-50%);
+            z-index: -3;
+            img{
+                width: 100%;
+                @include image;
+            }
+            
+        }
+        &_tree3{
+            max-width: 400px;
+            // transform: rotate(45deg);
+            position: absolute;
+            width: 100%;
+            
+            left: 0px;
+            top: auto;
+            bottom: 0px;
+            transform: translate(0px,20px);
+            z-index: 1;
+            img{
+                max-width: 495px;
+                width: 100%;
+                @include image;
+            }
+            
+        }
+        &_firCone1{
+            position: absolute;
+            max-width: 123px;
+            left: 50%;
+            top: 70%;
+            width: 100%;
+            
+        }
+        &_firCone2{
+           
+            position: absolute;
+            max-width: 123px;
+            max-height: 106px;
+            left: 20%;
+            transform: translate(-50%,0px);
+            top: 30px;
+            width: 100%;
+            height: 100%;
+            img{
+                transform: rotate(270deg);
+                width: 100%;
+                height: 100%;
+                @include image;
+            }
+        }
+        &_firCone3{
+           
+            position: absolute;
+            max-width: 123px;
+            max-height: 106px;
+            right: 5%;
+            // transform: translate(-50%,0px);
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            img{
+                transform: rotate(0deg);
+                width: 100%;
+                height: 100%;
+                @include image;
+            }
+        }
+    }
+    
+}
+@import "media";

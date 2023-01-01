@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'ProximaNova';
   src: 
-  url('../fonts/ProximaNova-Regular.eot') format('embedded-opentype')
-  url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+  url('../fonts/ProximaNova-Regular.eot') format('embedded-opentype'),
+ 
   url('../fonts/ProximaNova-Regular.woff') format('woff'),
   url('../fonts/ProximaNova-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -11,18 +11,25 @@
 @font-face {
   font-family: 'ProximaNova';
   src: 
-  url('../fonts/ProximaNova-SemiBold.eot') format('embedded-opentype')
-  url('../fonts/ProximaNova-SemiBold.woff2') format('woff2'),
+  url('../fonts/ProximaNova-SemiBold.eot') format('embedded-opentype'),
   url('../fonts/ProximaNova-SemiBold.woff') format('woff'),
   url('../fonts/ProximaNova-SemiBold.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
+  font-family: 'ProximaNova';
+  src: 
+  url('../fonts/ProximaNova-Bold.eot') format('embedded-opentype'),
+  url('../fonts/ProximaNova-Bold.woff') format('woff'),
+  url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Roboto';
   src: 
-  url('../fonts/Roboto-Regular.eot') format('embedded-opentype')
-  url('../fonts/Roboto-Regular.woff2') format('woff2'),
+  url('../fonts/Roboto-Regular.eot') format('embedded-opentype'),
   url('../fonts/Roboto-Regular.woff') format('woff'),
   url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;

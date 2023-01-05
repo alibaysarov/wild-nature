@@ -164,4 +164,50 @@ h1,h2,h3,h4,h5,h6{
     }
     
 }
+.map{
+    @include section(50,100);
+    position: relative;
+    &__content{
+        display: grid;
+        grid-template-columns: 2.9fr 1.8fr;
+        grid-gap: 40px;
+        min-height: 495px;
+        align-items: center;
+        
+    }
+    &__col{
+        grid-column: 2/3;
+        p{
+           @include text($title,24,16,1100,$black);
+        }
+    }
+    .tree__img{
+        position: absolute;
+        height: auto;
+        bottom: 10px;
+        left: 0px;
+        bottom: 0px;
+        transform: translate(0px,20%);
+        z-index: -1;
+        img{
+            @include image;
+            max-width: 495px;
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translate(-10px,0px);
+        width: 100%;
+        max-width: 760px;
+        height: 100%;
+       
+        z-index: -2;
+    }
+    &__image{
+        object-fit: cover;
+        @include image;
+    }
+}
 @import "media";

@@ -22,6 +22,35 @@ h1,h2,h3,h4,h5,h6{
     font-weight: bold;
     @include fontSize(48,35,1100);
 }
+.volume-list{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    &__item{
+        padding: 10px;
+        border-right:2px solid #c4c4c4;
+        color: #c4c4c4;
+        font-family: $title;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        &:active{
+            color: darken($color: #c4c4c4, $amount: 15);
+        }
+        &.active{
+            color: darken($color: #c4c4c4, $amount: 15);
+        }
+        @include fontSize(30,25,1100);
+        &:last-of-type{
+            border-right:none;
+        }
+    }
+}
 .button{
     cursor: pointer;
     border:none;
@@ -280,5 +309,82 @@ h1,h2,h3,h4,h5,h6{
         }
     }
 }
-
+.salmon-oil{
+    position: relative;
+    overflow-x: hidden;
+    @include section(150,172);
+    .tree__img1{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        transform: translate(105px,0px);
+        width: 100%;
+        max-width: 380px;
+        object-fit: contain;
+    }
+    .tree__img2{
+        position: absolute;
+        top: 50%;
+        transform: translate(-25px,-70%);
+        left: 0px;
+        width: 100%;
+        max-width: 358px;
+        object-fit: contain;
+    }
+    
+    p{
+        @include text($title,24,15,1100,$black);
+    }
+    &__blank{
+        font-family: $text;
+        @include fontSize(15,13,1100);
+        color: #c4c4c4;
+        display: block;
+        margin-bottom: 41px;
+    }
+    &__content{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+    }
+    &__img{
+        position: relative;
+        z-index: -1;
+        .salmon-oil__image{
+            transform: translate(100px,0px);
+            @include image;
+        }
+        .salmon-oil__fish{
+            transform: translateY(20px);
+            @include image;
+        }
+        
+    }
+    &__buy{
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    &__button{
+        margin-bottom: 15px;
+    }
+    &__price{
+        width: 100%;
+        max-width: 350px;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-gap: 7px;
+    }
+    &__volume,&__value{
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        width: 100%;
+        max-width: 171px;
+        min-height: 72px;
+    }
+}
 @import "media";

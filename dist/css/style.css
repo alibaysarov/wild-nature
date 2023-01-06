@@ -71,6 +71,36 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(35px + 13 * ((100vw - 320px) / 780));
 }
 
+.volume-list {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.volume-list__item {
+  padding: 10px;
+  border-right: 2px solid #c4c4c4;
+  color: #c4c4c4;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-size: calc(25px + 5 * ((100vw - 320px) / 780));
+}
+.volume-list__item:active {
+  color: #9e9e9e;
+}
+.volume-list__item.active {
+  color: #9e9e9e;
+}
+.volume-list__item:last-of-type {
+  border-right: none;
+}
+
 .button {
   cursor: pointer;
   border: none;
@@ -382,6 +412,102 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
+.salmon-oil {
+  position: relative;
+  overflow-x: hidden;
+  padding: 150px 20px 172px 20px;
+}
+@media (max-width: 767px) {
+  .salmon-oil {
+    padding-top: calc(150px/1.5);
+    padding-bottom: calc(172px/1.5);
+  }
+}
+@media (max-width: 575px) {
+  .salmon-oil {
+    padding-top: calc(150px/2);
+    padding-bottom: calc(172px/2);
+  }
+}
+.salmon-oil .tree__img1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translate(105px, 0px);
+  width: 100%;
+  max-width: 380px;
+  object-fit: contain;
+}
+.salmon-oil .tree__img2 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-25px, -70%);
+  left: 0px;
+  width: 100%;
+  max-width: 358px;
+  object-fit: contain;
+}
+.salmon-oil p {
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  font-size: calc(15px + 9 * ((100vw - 320px) / 780));
+}
+.salmon-oil__blank {
+  font-family: "Roboto", sans-serif;
+  font-size: calc(13px + 2 * ((100vw - 320px) / 780));
+  color: #c4c4c4;
+  display: block;
+  margin-bottom: 41px;
+}
+.salmon-oil__content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+}
+.salmon-oil__img {
+  position: relative;
+  z-index: -1;
+}
+.salmon-oil__img .salmon-oil__image {
+  transform: translate(100px, 0px);
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+.salmon-oil__img .salmon-oil__fish {
+  transform: translateY(20px);
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+.salmon-oil__buy {
+  width: 100%;
+  max-width: 350px;
+}
+.salmon-oil__button {
+  margin-bottom: 15px;
+}
+.salmon-oil__price {
+  width: 100%;
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 7px;
+}
+.salmon-oil__volume, .salmon-oil__value {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #B7D271;
+  width: 100%;
+  max-width: 171px;
+  min-height: 72px;
+}
+
 @media (max-width: 1300px) {
   .bg_bear {
     max-width: 800px;
@@ -433,6 +559,26 @@ h1, h2, h3, h4, h5, h6 {
   .features__top-text {
     margin-bottom: 10px;
   }
+  .salmon-oil .tree__img1 {
+    display: none;
+  }
+  .salmon-oil .tree__img2 {
+    display: none;
+  }
+  .salmon-oil__content {
+    grid-template-columns: 75%;
+  }
+  .salmon-oil__img {
+    position: absolute;
+  }
+  .salmon-oil__image {
+    max-width: 200px;
+  }
+  .salmon-oil__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media (max-width: 768px) {
   .bg_bear {
@@ -471,6 +617,9 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
   .features__bottom img {
+    display: none;
+  }
+  .salmon-oil__fish {
     display: none;
   }
 }
@@ -522,5 +671,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   .map .tree__img img {
     max-width: 150px;
+  }
+  .salmon-oil__content {
+    grid-template-columns: 100%;
+  }
+  .salmon-oil__price {
+    grid-template-columns: repeat(2, minmax(100px, 170px));
   }
 }

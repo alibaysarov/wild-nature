@@ -53,6 +53,29 @@
       margin-bottom: 10px;
     }
   }
+  .salmon-oil{
+    .tree__img1{
+      display: none;
+    }
+    .tree__img2{
+      display: none;
+    }
+    &__content{
+      grid-template-columns: 75%;
+    }
+    &__img{
+      position: absolute
+    }
+    &__image{
+      max-width: 200px;
+    }
+    &__col{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+  }
 }
 @media(max-width:768px){
   .bg_bear{
@@ -97,6 +120,11 @@
       img{
         display: none;
       }
+    }
+  }
+  .salmon-oil{
+    &__fish{
+      display: none;
     }
   }
 }
@@ -153,6 +181,14 @@
       img{
         max-width: 150px;
       }
+    }
+  }
+  .salmon-oil{
+    &__content{
+      grid-template-columns: 100%;
+    }
+    &__price{
+      grid-template-columns: repeat(2,minmax(100px,170px));
     }
   }
 }

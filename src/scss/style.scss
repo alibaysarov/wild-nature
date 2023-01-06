@@ -22,6 +22,26 @@ h1,h2,h3,h4,h5,h6{
     font-weight: bold;
     @include fontSize(48,35,1100);
 }
+.text{
+    @include text($title,24,15,1100,$black);
+}
+.price-block{
+        width: 100%;
+        max-width: 350px;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-gap: 7px;
+    &__volume,&__value{
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        width: 100%;
+        max-width: 171px;
+        min-height: 72px;
+    }
+}
 .volume-list{
     display: grid;
     align-items: center;
@@ -50,6 +70,16 @@ h1,h2,h3,h4,h5,h6{
             border-right:none;
         }
     }
+}
+.text_blank{
+    font-family: $text;
+    @include fontSize(15,13,1100);
+    color: #c4c4c4;
+    display: block;
+    margin-bottom: 41px;
+}
+.text_right{
+    text-align: right;
 }
 .button{
     cursor: pointer;
@@ -336,9 +366,7 @@ h1,h2,h3,h4,h5,h6{
         @include text($title,24,15,1100,$black);
     }
     &__blank{
-        font-family: $text;
-        @include fontSize(15,13,1100);
-        color: #c4c4c4;
+        
         display: block;
         margin-bottom: 41px;
     }
@@ -386,5 +414,62 @@ h1,h2,h3,h4,h5,h6{
         max-width: 171px;
         min-height: 72px;
     }
+}
+
+.deer-antler{
+    @include section(85,85);
+    overflow-x: hidden;
+    position: relative;
+    .tree__img{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        img{
+            width: 100%;
+        object-fit: cover;
+        max-width: 443px;
+        }
+    }
+    .deer__img{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-25%);
+        img{
+            @include image;
+            width: 520px;
+        }
+    }
+    &__content{
+        display: grid;
+        // align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2,auto);
+    }
+    &__col{
+        width: 100%;
+        max-width: 705px;
+    }
+    &__img{
+        @include image;
+        position: relative;
+        z-index: -1;
+        transform: translate(-5%,0%);
+    }
+    &__text{
+        margin-bottom: 16px;
+    }
+    &__bottom{
+        width: 100%;
+        max-width: 355px;
+        margin-right: 0px;
+        margin-left: auto;
+        max-width: 350px;
+    }
+    &__button{
+        margin-bottom: 14px;
+    }
+    
+    
 }
 @import "media";

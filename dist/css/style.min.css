@@ -71,6 +71,32 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(35px + 13 * ((100vw - 320px) / 780));
 }
 
+.text {
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  font-size: calc(15px + 9 * ((100vw - 320px) / 780));
+}
+
+.price-block {
+  width: 100%;
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 7px;
+}
+.price-block__volume, .price-block__value {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #B7D271;
+  width: 100%;
+  max-width: 171px;
+  min-height: 72px;
+}
+
 .volume-list {
   display: grid;
   align-items: center;
@@ -99,6 +125,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 .volume-list__item:last-of-type {
   border-right: none;
+}
+
+.text_blank {
+  font-family: "Roboto", sans-serif;
+  font-size: calc(13px + 2 * ((100vw - 320px) / 780));
+  color: #c4c4c4;
+  display: block;
+  margin-bottom: 41px;
+}
+
+.text_right {
+  text-align: right;
 }
 
 .button {
@@ -455,9 +493,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(15px + 9 * ((100vw - 320px) / 780));
 }
 .salmon-oil__blank {
-  font-family: "Roboto", sans-serif;
-  font-size: calc(13px + 2 * ((100vw - 320px) / 780));
-  color: #c4c4c4;
   display: block;
   margin-bottom: 41px;
 }
@@ -506,6 +541,76 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 171px;
   min-height: 72px;
+}
+
+.deer-antler {
+  padding: 85px 20px 85px 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .deer-antler {
+    padding-top: calc(85px/1.5);
+    padding-bottom: calc(85px/1.5);
+  }
+}
+@media (max-width: 575px) {
+  .deer-antler {
+    padding-top: calc(85px/2);
+    padding-bottom: calc(85px/2);
+  }
+}
+.deer-antler .tree__img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.deer-antler .tree__img img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 443px;
+}
+.deer-antler .deer__img {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-25%);
+}
+.deer-antler .deer__img img {
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+  width: 520px;
+}
+.deer-antler__content {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+}
+.deer-antler__col {
+  width: 100%;
+  max-width: 705px;
+}
+.deer-antler__img {
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+  position: relative;
+  z-index: -1;
+  transform: translate(-5%, 0%);
+}
+.deer-antler__text {
+  margin-bottom: 16px;
+}
+.deer-antler__bottom {
+  width: 100%;
+  max-width: 355px;
+  margin-right: 0px;
+  margin-left: auto;
+  max-width: 350px;
+}
+.deer-antler__button {
+  margin-bottom: 14px;
 }
 
 @media (max-width: 1300px) {
@@ -579,6 +684,13 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
   }
+  .deer-antler .tree__img img {
+    max-width: 310px;
+    height: fit-content;
+  }
+  .deer-antler .deer__img img {
+    width: 400px;
+  }
 }
 @media (max-width: 768px) {
   .bg_bear {
@@ -620,6 +732,34 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
   .salmon-oil__fish {
+    display: none;
+  }
+  .deer-antler .tree__img {
+    right: 0px;
+    top: 50%;
+    transform: translateY(-25%);
+    z-index: -1;
+  }
+  .deer-antler .tree__img img {
+    max-width: 140px;
+  }
+  .deer-antler .deer__img {
+    left: 10%;
+    top: -5%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+  .deer-antler .deer__img img {
+    width: 200px;
+    opacity: 0.7;
+  }
+  .deer-antler__col * {
+    text-align: center;
+  }
+  .deer-antler__bottom {
+    margin: 0 auto;
+  }
+  .deer-antler__img {
     display: none;
   }
 }
@@ -677,5 +817,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   .salmon-oil__price {
     grid-template-columns: repeat(2, minmax(100px, 170px));
+  }
+  .deer-antler .tree__img {
+    display: none;
   }
 }

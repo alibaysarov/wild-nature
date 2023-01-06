@@ -291,6 +291,97 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
+.features {
+  padding: 60px 20px 60px 20px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .features {
+    padding-top: calc(60px/1.5);
+    padding-bottom: calc(60px/1.5);
+  }
+}
+@media (max-width: 575px) {
+  .features {
+    padding-top: calc(60px/2);
+    padding-bottom: calc(60px/2);
+  }
+}
+.features__fircone {
+  position: absolute;
+  bottom: 2%;
+  left: 10%;
+}
+.features__fircone img {
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+.features__top-text {
+  margin-bottom: 80px;
+}
+.features__top-text p {
+  text-align: center;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  font-size: calc(15px + 9 * ((100vw - 320px) / 780));
+}
+.features__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 10px;
+  margin-bottom: 40px;
+}
+.features .col {
+  width: 100%;
+  max-width: 341px;
+  position: relative;
+}
+.features .col__img {
+  position: relative;
+  transform: translate(0px, 50%);
+}
+.features .col__img img {
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+.features .col__img.fircone {
+  position: relative;
+}
+.features .col__img.fircone img {
+  transform: translate(220%, -10%);
+}
+.features .col__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 84px;
+  border-radius: 69px;
+  background-color: #B7D271;
+  height: 341px;
+}
+.features .col_no-img {
+  opacity: 0;
+}
+.features__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.features__bottom img {
+  position: absolute;
+  transform: translate(116%, 50px);
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+
 @media (max-width: 1300px) {
   .bg_bear {
     max-width: 800px;
@@ -339,6 +430,9 @@ h1, h2, h3, h4, h5, h6 {
   .map .tree__img img {
     max-width: 250px;
   }
+  .features__top-text {
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 768px) {
   .bg_bear {
@@ -372,6 +466,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   .map__content__col p {
     text-align: center;
+  }
+  .features__fircone {
+    display: none;
+  }
+  .features__bottom img {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .features__top-text {
+    margin-bottom: 0px;
+  }
+  .features__content {
+    justify-content: center;
+  }
+  .features .fircone {
+    display: none;
   }
 }
 @media (max-width: 576px) {

@@ -48,6 +48,11 @@
       }
     }
   }
+  .features{
+    &__top-text{
+      margin-bottom: 10px;
+    }
+  }
 }
 @media(max-width:768px){
   .bg_bear{
@@ -82,6 +87,29 @@
           text-align: center;
         }
       }
+    }
+  }
+  .features{
+    &__fircone{
+      display: none;
+    }
+    &__bottom{
+      img{
+        display: none;
+      }
+    }
+  }
+}
+@media(max-width:750px){
+  .features{
+    &__top-text{
+      margin-bottom: 0px;
+    }
+    &__content{
+      justify-content: center;
+    }
+    .fircone{
+      display: none;
     }
   }
 }

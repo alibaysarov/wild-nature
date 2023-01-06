@@ -210,4 +210,75 @@ h1,h2,h3,h4,h5,h6{
         @include image;
     }
 }
+.features{
+    @include section(60,60);
+    position: relative;
+    &__fircone{
+        position: absolute;
+        bottom:2%;
+        left: 10%;
+        img{
+            @include image;
+        }
+    }
+    &__top-text{
+        margin-bottom: 80px;
+        p{
+            text-align: center;
+            @include text($title,24,15,1100,$black);
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 10px;
+        margin-bottom: 40px;
+    }
+    .col{
+        width: 100%;
+        // width: calc(100% / 3);
+        max-width: 341px;
+        position: relative;
+        &__img{
+            position: relative;
+            transform: translate(0px, 50%);
+            img{
+                @include image;
+            }
+            &.fircone{
+                position: relative;
+                img{
+                    transform: translate(220%,-10%);
+                }
+            }
+        }
+        &__inner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 84px;
+            border-radius:69px;
+            background-color: $green;
+            height: 341px;
+
+        }
+    }
+    .col_no-img{
+        opacity: 0;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img{
+            position: absolute;
+            transform: translate(116%, 50px);
+            @include image;
+        }
+    }
+}
+
 @import "media";

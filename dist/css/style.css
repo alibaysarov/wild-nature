@@ -613,6 +613,84 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 14px;
 }
 
+.bull {
+  padding: 85px 20px 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .bull {
+    padding-top: calc(85px/1.5);
+    padding-bottom: calc(100px/1.5);
+  }
+}
+@media (max-width: 575px) {
+  .bull {
+    padding-top: calc(85px/2);
+    padding-bottom: calc(100px/2);
+  }
+}
+.bull__content {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.bull__img {
+  position: relative;
+  z-index: -1;
+  left: 5%;
+}
+.bull__img img {
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+.bull__blank {
+  display: block;
+  margin-bottom: 100px;
+}
+.bull .price-block {
+  margin-top: 10px;
+}
+.bull .price-block__row {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+}
+.bull .price-block__value, .bull .price-block__volume {
+  width: 171px;
+  max-width: 100%;
+}
+.bull .tree__img1 {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translate(-25%, -50%) rotate(-30deg);
+}
+.bull .tree__img1 img {
+  max-width: 100%;
+}
+.bull .tree__img2 {
+  position: absolute;
+  right: 0px;
+  bottom: 20px;
+  transform: translate(25%, 0px) rotate(-138deg);
+}
+.bull .tree__img2 img {
+  max-width: 100%;
+}
+.bull .bull__image {
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translate(-50%, 0px);
+}
+.bull .bull__image img {
+  width: 100%;
+  max-width: 427px;
+  object-fit: cover;
+}
+
 @media (max-width: 1300px) {
   .bg_bear {
     max-width: 800px;
@@ -690,6 +768,27 @@ h1, h2, h3, h4, h5, h6 {
   }
   .deer-antler .deer__img img {
     width: 400px;
+  }
+  .bull__content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .bull__img {
+    display: none;
+  }
+  .bull .bull__image {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 65%;
+    right: 0px;
+    transform: translate(0px, 0px);
+    opacity: 0.7;
+    max-width: 300px;
+    height: fit-content;
+  }
+  .bull .tree__img1, .bull .tree__img2 {
+    display: none;
   }
 }
 @media (max-width: 768px) {

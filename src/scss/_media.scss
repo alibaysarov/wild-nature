@@ -89,6 +89,29 @@
       }
     }
   }
+  .bull{
+    &__content{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    &__img{
+      display: none;
+    }
+    .bull__image{
+      position: absolute;
+      z-index: -1;
+      top: 0px;
+      left: 65%;
+      right: 0px;
+      transform: translate(0px,0px);
+      opacity: .7;
+      max-width: 300px;
+      height: fit-content;
+    }
+    .tree__img1,.tree__img2{
+      display: none;
+    }
+  }
 }
 @media(max-width:768px){
   .bg_bear{
@@ -242,4 +265,5 @@
       display: none;
     }
   }
+  
 }

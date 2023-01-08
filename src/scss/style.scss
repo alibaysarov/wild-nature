@@ -98,7 +98,8 @@ h1,h2,h3,h4,h5,h6{
         background-color: darken($green,10%);
     }
     &:active{
-        transform: scale(.95)
+        transform: scale(.95);
+        
     }
 }
 .hero{
@@ -471,5 +472,71 @@ h1,h2,h3,h4,h5,h6{
     }
     
     
+}
+.bull{
+    @include section(85,100);
+    position: relative;
+    overflow: hidden;
+    &__content{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    &__img{
+        position: relative;
+        z-index: -1;
+        left: 5%;
+        
+        img{
+            @include image;
+            
+        }
+    }
+    
+    &__blank{
+        display: block;
+        margin-bottom: 100px;
+    }
+    .price-block{
+        margin-top: 10px;
+        &__row{
+           width: 100%;
+           max-width: 350px;
+           display: flex;
+           align-items: center;
+        }
+        &__value,&__volume{
+            width: 171px;
+            max-width: 100%;
+        }
+    }
+    .tree__img1{
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translate(-25%,-50%) rotate(-30deg);
+        img{
+            max-width: 100%;
+        }
+    }
+    .tree__img2{
+        position: absolute;
+        right: 0px;
+        bottom: 20px;
+        transform: translate(25%,0px) rotate(-138deg);
+        img{
+            max-width: 100%;
+        }
+    }
+    .bull__image{
+        position: absolute;
+        bottom: 0px;
+        left: 25%;
+        transform: translate(-50%,0px);
+        img{
+            width: 100%;
+            max-width: 427px;
+            object-fit: cover;
+        }
+    }
 }
 @import "media";

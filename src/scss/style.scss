@@ -102,9 +102,72 @@ h1,h2,h3,h4,h5,h6{
         
     }
 }
+main{
+    overflow-x: hidden;
+}
+.header{
+    position: relative;
+    z-index: -1;
+    @include section(20,0);
+    &__content{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .header__menu-mob.menu-mob{
+        display: none;
+    }
+    .burger{
+        cursor: pointer;
+        position: absolute;
+        z-index: 21;
+        left: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        &__line{
+            width: 30px;
+            height: 2px;
+            background-color: $darkgreen;
+            border-radius:3px;
+            &:nth-child(2){
+                transform: translate(0px,5px);
+            }
+            &:nth-child(3){
+                transform: translate(0px,10px);
+            }
+        }
+    }
+    .logo{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        img{
+            width: 100px;
+            @include image;
+        }
+    }
+    .menu{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        &__link{
+            text-decoration: none;
+            font-family: $text;
+            @include fontSize(12,11,1100);
+            color: $black;
+            font-weight: 400;
+            .image-link{
+                &__image{
+                    @include image;
+                }
+            }
+        }
+    }
+}
 .hero{
-    overflow: hidden;
-    @include section(150,220);
+    
+    @include section(200,220);
     position: relative;
     &__content{
         display: grid;
@@ -342,7 +405,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .salmon-oil{
     position: relative;
-    overflow-x: hidden;
+   
     @include section(150,172);
     .tree__img1{
         position: absolute;
@@ -419,7 +482,7 @@ h1,h2,h3,h4,h5,h6{
 
 .deer-antler{
     @include section(85,85);
-    overflow-x: hidden;
+    
     position: relative;
     .tree__img{
         position: absolute;
@@ -476,7 +539,7 @@ h1,h2,h3,h4,h5,h6{
 .bull{
     @include section(85,100);
     position: relative;
-    overflow: hidden;
+    
     &__content{
         display: grid;
         grid-template-columns: 2fr 2fr;
@@ -585,7 +648,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .delivery{
     @include section(100,100);
-    overflow: hidden;
+    
     position: relative;
     &__content{
         width: 100%;
@@ -612,7 +675,7 @@ h1,h2,h3,h4,h5,h6{
 .contacts{
     @include section(200,100);
     position: relative;
-    overflow-x: hidden;
+    
     .tree__image1{
         position: absolute;
         top: 0px;

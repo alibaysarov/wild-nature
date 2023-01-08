@@ -691,6 +691,57 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
+.slider {
+  padding: 100px 20px 100px 20px;
+}
+@media (max-width: 767px) {
+  .slider {
+    padding-top: calc(100px/1.5);
+    padding-bottom: calc(100px/1.5);
+  }
+}
+@media (max-width: 575px) {
+  .slider {
+    padding-top: calc(100px/2);
+    padding-bottom: calc(100px/2);
+  }
+}
+.slider__title {
+  display: block;
+  text-align: center;
+  margin-bottom: 102px;
+}
+.slider .swiper {
+  position: relative;
+  max-width: 981px;
+  height: 120px;
+}
+.slider .swiper .swiper-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider .swiper .swiper-button-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0px;
+  cursor: pointer;
+}
+.slider .swiper .swiper-button-next::after {
+  content: "";
+}
+.slider .swiper .swiper-button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  cursor: pointer;
+}
+.slider .swiper .swiper-button-prev::after {
+  content: "";
+}
+
 @media (max-width: 1300px) {
   .bg_bear {
     max-width: 800px;

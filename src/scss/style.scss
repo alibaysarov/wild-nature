@@ -539,4 +539,48 @@ h1,h2,h3,h4,h5,h6{
         }
     }
 }
+.slider{
+    @include section(100,100);
+    &__title{
+        display: block;
+        text-align: center;
+        margin-bottom: 102px;
+    }
+    .swiper{
+        position: relative;
+        
+        max-width: 981px;
+       
+        height: 120px;
+        
+        
+        .swiper-button{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            
+            &-next{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                right: 0px;
+                cursor: pointer;
+                &::after{
+                    content:'';
+                }
+            }
+            &-prev{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: 0px;
+                cursor: pointer;
+                &::after{
+                    content:'';
+                }
+            }
+        }
+    }
+}
 @import "media";

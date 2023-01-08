@@ -609,4 +609,67 @@ h1,h2,h3,h4,h5,h6{
         }
     }
 }
+.contacts{
+    @include section(200,100);
+    position: relative;
+    overflow-x: hidden;
+    .tree__image1{
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        transform: rotate(21deg);
+    }
+    .tree__image2{
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        right: 30px;
+        transform: rotate(152deg) translate(-25%,0px);
+    }
+    &__title{
+        display: block;
+        margin-bottom: 33px;
+    }
+    &__content{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2fr 2fr;
+        grid-gap: 22px;
+    }
+    &__map{
+        iframe{
+            width: 100%;
+            max-width: 600px;
+            min-height: 450px;
+        }
+    }
+    .list{
+        padding: 0px;
+        list-style: none;
+        &__item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 33px;
+        }
+        &__image{
+            margin-right: 10px;
+        }
+        &__text{
+            font-family: $title;
+            @include fontSize(36,24,1100);
+            text-decoration: none;
+            color: $black;
+        }
+    }
+}
+.footer{
+    @include section(50,50);
+    &__content{
+        display: flex;
+        justify-content: center;
+    }
+    &__text{
+        text-align: center;
+    }
+}
 @import "media";

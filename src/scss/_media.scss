@@ -121,6 +121,24 @@
       }
     }
   }
+  .contacts{
+    .tree__image1,.tree__image2{
+      display: none;
+    }
+    &__content{
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    &__map{
+      display: flex;
+      justify-content: center;
+    }
+    &__col{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 @media(max-width:768px){
   .bg_bear{

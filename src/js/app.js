@@ -4,6 +4,7 @@ mainFuncs.isWebp();
 
 
 const brandSlider=new Swiper('.swiper',{
+  loop:true,
   direction: 'horizontal',
   slidesPerView:4,
   centeredSlides:true,

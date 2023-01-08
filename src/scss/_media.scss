@@ -112,6 +112,15 @@
       display: none;
     }
   }
+  .delivery{
+    &__image{
+      opacity: 0.7;
+      transform: translate(20px, 5%);
+      img{
+        max-width: 500px;
+      }
+    }
+  }
 }
 @media(max-width:768px){
   .bg_bear{
@@ -209,6 +218,19 @@
       display: none;
     }
   }
+  .slider{
+    
+    .swiper-button{
+      &-next{
+        width: 20px;
+        height: 20px;
+      }
+      &-prev{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }
 @media(max-width:576px){
   .hero{
@@ -265,5 +287,13 @@
       display: none;
     }
   }
-  
+  .delivery{
+    &__image{
+      opacity: 0.7;
+      transform: translate(20px, 5%);
+      img{
+        max-width: 400px;
+      }
+    }
+  }
 }

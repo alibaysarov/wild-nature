@@ -742,6 +742,47 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
 }
 
+.delivery {
+  padding: 100px 20px 100px 20px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .delivery {
+    padding-top: calc(100px/1.5);
+    padding-bottom: calc(100px/1.5);
+  }
+}
+@media (max-width: 575px) {
+  .delivery {
+    padding-top: calc(100px/2);
+    padding-bottom: calc(100px/2);
+  }
+}
+.delivery__content {
+  width: 100%;
+}
+.delivery__title {
+  margin-bottom: 22px;
+}
+.delivery__col {
+  max-width: 555px;
+}
+.delivery__image {
+  position: absolute;
+  max-width: 876px;
+  z-index: -1;
+  right: 0px;
+  bottom: 0px;
+  transform: translate(20px, 15%);
+  overflow: hidden;
+}
+.delivery__image img {
+  max-width: 100%;
+  min-width: 50px;
+  height: auto;
+}
+
 @media (max-width: 1300px) {
   .bg_bear {
     max-width: 800px;
@@ -841,6 +882,13 @@ h1, h2, h3, h4, h5, h6 {
   .bull .tree__img1, .bull .tree__img2 {
     display: none;
   }
+  .delivery__image {
+    opacity: 0.7;
+    transform: translate(20px, 5%);
+  }
+  .delivery__image img {
+    max-width: 500px;
+  }
 }
 @media (max-width: 768px) {
   .bg_bear {
@@ -923,6 +971,14 @@ h1, h2, h3, h4, h5, h6 {
   .features .fircone {
     display: none;
   }
+  .slider .swiper-button-next {
+    width: 20px;
+    height: 20px;
+  }
+  .slider .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+  }
 }
 @media (max-width: 576px) {
   .hero__content {
@@ -970,5 +1026,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .deer-antler .tree__img {
     display: none;
+  }
+  .delivery__image {
+    opacity: 0.7;
+    transform: translate(20px, 5%);
+  }
+  .delivery__image img {
+    max-width: 400px;
   }
 }

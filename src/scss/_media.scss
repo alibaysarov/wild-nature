@@ -225,6 +225,16 @@
   }
 }
 @media(max-width:750px){
+  .header{
+    .logo{
+      max-width: 80px;
+    }
+  }
+  .hero{
+    .hero__bg_firCone2{
+      display: none;
+    }
+  }
   .features{
     &__top-text{
       margin-bottom: 0px;
@@ -260,10 +270,14 @@
     }
     .menu-mob{
       &__list{
+        transition: left 0.3s ease;
         list-style: none;
         position: absolute;
         top: 0px;
         left: -100%;
+        &.active{
+          left: 0%;
+        }
         width: 100%;
         height: 100vh;
         background-color: #fff;
@@ -298,7 +312,7 @@
     max-width: 300px;
     opacity: 0.8;
     bottom: 0px;
-    top: 50%;
+    top: 30%;
     transform: translate(0px,-20%);
   }
   .hero__bg_tree{
@@ -319,11 +333,19 @@
     display: none;
   }
   .map{
+    &__content{
+      min-height: 11px;
+    }
     .tree__img{
-      transform: translate(0px,-50%);
+      display: none;
       img{
         max-width: 150px;
       }
+    }
+  }
+  .features{
+    .col__img.col_no-img{
+      display: none;
     }
   }
   .salmon-oil{

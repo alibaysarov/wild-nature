@@ -76,28 +76,28 @@
 
       <div class="hero__col">
         <h1 class="hero__title title">НАТУРАЛЬНЫЕ ТОВАРЫ — ИЗ РАЗЛИЧНЫХ УГОЛКОВ РОССИИ</h1>
-        <span class="hero__subtitle">Дикая природа у вас дома!</span>
-        <button class="hero__button button">Узнать</button>
+        <span class="hero__subtitle appear">Дикая природа у вас дома!</span>
+        <button class="hero__button button scale">Узнать</button>
       </div>
-      <div class="hero__bg bg_bear">
+      <div class="hero__bg bg_bear translateRTL">
         <img src="img/hero/bear.png" alt="Медведь" class="bg__img">
       </div>
-      <div class="hero__bg hero__bg_tree">
+      <div class="hero__bg hero__bg_tree appear">
         <img src="img/hero/tree1.png" alt="Ветка" width="295" height="133">
       </div>
-      <div class="hero__bg hero__bg_tree2">
+      <div class="hero__bg hero__bg_tree2 appear">
         <img src="img/hero/tree2.png" alt="Ветка" width="266" height="549">
       </div>
-      <div class="hero__bg hero__bg_tree3">
+      <div class="hero__bg hero__bg_tree3 appear">
         <img src="img/hero/tree3.png" alt="Ветка" width="495" height="331">
       </div>
-      <div class="hero__bg hero__bg_firCone1">
+      <div class="hero__bg hero__bg_firCone1 appear">
         <img src="img/hero/firCone1.png" alt="Ветка" width="123" height="106">
       </div>
-      <div class="hero__bg hero__bg_firCone2">
+      <div class="hero__bg hero__bg_firCone2 appear">
         <img src="img/hero/firCone1.png" alt="Ветка" width="123" height="106">
       </div>
-      <div class="hero__bg hero__bg_firCone3">
+      <div class="hero__bg hero__bg_firCone3 appear">
         <img src="img/hero/firCone1.png" alt="Ветка" width="123" height="106">
       </div>
     </div>
@@ -161,7 +161,10 @@
       <button class="feature__button button">
         Узнать детали
       </button>
-      <img src="img/features/dog.png" alt="" class="dog__img">
+      <div class="dog__img">
+        <img src="img/features/dog.png" alt="" class="">
+      </div>
+      
     </div>
     <!-- /.feaure__bottom -->
     <!-- /.features__content -->
@@ -189,10 +192,10 @@
         </span>
         <div class="salmon-oil__buy">
           <div class="salmon-oil__list volume-list">
-            <div class="volume-list__item">0,25 л</div>
-            <div class="volume-list__item">0,5 л</div>
-            <div class="volume-list__item">1 л</div>
-            <div class="volume-list__item">5 л</div>
+            <div class="volume-list__item" data-price="250">0,25 л</div>
+            <div class="volume-list__item" data-price="500">0,5 л</div>
+            <div class="volume-list__item" data-price="1000">1 л</div>
+            <div class="volume-list__item" data-price="5000">5 л</div>
           </div>
           
         </div>
@@ -223,9 +226,9 @@
       <p class="text_blank text_right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis dictum tempus ut et, risus vitae. Tellus viverra fringilla porttitor eleifend. Sapien nec nunc sagittis tristique mus dignissim amet convallis. Donec eu, eros augue sagittis, malesuada malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis dictum tempus ut et, risus vitae. </p>
       <div class="deer-antler__bottom">
         <div class="deer-antler__list volume-list">
-          <div class="volume-list__item">S</div>
-          <div class="volume-list__item">M</div>
-          <div class="volume-list__item">L</div>
+          <div class="volume-list__item" data-price="500">S</div>
+          <div class="volume-list__item" data-price="1000">M</div>
+          <div class="volume-list__item" data-price="1500">L</div>
         </div>
         <button class="deer-antler__button button">Купить</button>
         <div class="deer-antler__price price-block">

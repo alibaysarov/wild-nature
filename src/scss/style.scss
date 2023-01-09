@@ -6,6 +6,11 @@
     margin: 0;
     padding: 0;
 }
+body{
+    &.lock{
+        overflow: hidden;
+    }
+}
 .container{
     width: 100%;
     max-width: 1100px;
@@ -40,6 +45,9 @@ h1,h2,h3,h4,h5,h6{
         width: 100%;
         max-width: 171px;
         min-height: 72px;
+        color: #fff;
+        @include fontSize(22,15,1100);
+        font-family: $title;
     }
 }
 .volume-list{
@@ -107,7 +115,7 @@ main{
 }
 .header{
     position: relative;
-    z-index: -1;
+    
     @include section(20,0);
     &__content{
         width: 100%;
@@ -130,11 +138,31 @@ main{
             height: 2px;
             background-color: $darkgreen;
             border-radius:3px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
             &:nth-child(2){
                 transform: translate(0px,5px);
             }
             &:nth-child(3){
                 transform: translate(0px,10px);
+            }
+        }
+        &.active{
+            .burger__line{
+                &:nth-of-type(1){
+                    transform: translate(0px,5px);
+                    &.rotate{
+                        transform: translate(0px,5px) rotate(45deg);
+                    }
+                }
+                &:nth-of-type(2){
+                    opacity: 0;
+                }
+                &:nth-of-type(3){
+                    transform: translate(0px,0px);
+                    &.rotate{
+                        transform: translate(0px,0px) rotate(-45deg); 
+                    }
+                }
             }
         }
     }
@@ -148,6 +176,8 @@ main{
         }
     }
     .menu{
+        transition: transform 1s ease 0s;
+        transform: translateY(-150%);
         display: flex;
         align-items: start;
         justify-content: space-between;
@@ -176,6 +206,7 @@ main{
     &__title{
         display: block;
         margin: 0px 0px 22px;   
+        transform: translateX(-150%);
     }
     &__subtitle{
         display: block;
@@ -396,7 +427,7 @@ main{
         align-items: center;
         justify-content: center;
         position: relative;
-        img{
+        .dog__img{
             position: absolute;
             transform: translate(116%, 50px);
             @include image;
@@ -615,7 +646,11 @@ main{
         max-width: 981px;
        
         height: 120px;
-        
+        &-slide{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         
         .swiper-button{
             position: absolute;
@@ -735,4 +770,6 @@ main{
         text-align: center;
     }
 }
+
+@import "animations";
 @import "media";

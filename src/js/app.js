@@ -4,8 +4,11 @@ mainFuncs.isWebp();
 import {animations} from './modules/animations.js'
 import {burger} from './modules/burger.js'
 import {priceBlock} from './modules/priceBlock.js'
+import {menuScroll} from './modules/menuScroll.js'
 
-animations()
+
+menuScroll();
+animations();
 burger('.burger','.menu-mob__list');
 priceBlock('.salmon-oil__list.volume-list>*','.salmon-oil__price.price-block>.price-block__value')
 priceBlock('.deer-antler__list.volume-list>*','.deer-antler__price.price-block>.price-block__value')

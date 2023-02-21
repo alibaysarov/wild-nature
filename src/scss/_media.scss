@@ -267,8 +267,18 @@
     }
      .header__menu-mob.menu-mob{
       display: flex;
+      position: fixed;
+      width: 100%;
+      min-height: 65px;
+      top: 0px;
+      left: 0px;
+      background-color: #fff;
+      z-index: 100;
     }
     .menu-mob{
+      .logo{
+        max-width: 50px;
+      }
       &__list{
         transition: left 0.3s ease;
         list-style: none;
